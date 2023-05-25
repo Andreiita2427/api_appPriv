@@ -10,7 +10,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "stop": "echo 'Deteniendo la aplicación...' && pm2 stop api_apppriv",
+    "debug": "nodemon --inspect-brk index.js", 
+    "restart": "npm stop && npm start", 
+    "rebuild": "npm stop && npm install && npm start"
   },
   "keywords": [],
   "author": "",
